@@ -18,10 +18,10 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-if [[ ! $1 =~ ^[+-]?[0-9]+$ ]]; then
-  echo "Input is an integer."
-  exit 1
-fi
+# if [[ ! $1 =~ ^[+-]?[0-9]+$ ]]; then
+#   echo "Input is an integer."
+#   exit 1
+# fi
 
 if [[ ! -f /tmp/http-status-codes.csv ]]; then
   curl https://raw.githubusercontent.com/m0zgen/http-codes-spyder/master/codespy/output/http-status-codes.csv -o /tmp/http-status-codes.csv
